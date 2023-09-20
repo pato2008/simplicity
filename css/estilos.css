@@ -68,6 +68,9 @@ header {
 
 .menu {
     list-style: none;
+
+    /* usamos o displau:none para não mostra a lista de links */
+    display: none;
 }
 
 /* formataçao da palavra menu */
@@ -78,17 +81,34 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus,.menu a:hover,.menu a:focus{
-background-color: var(--cor-intermediaria);
+nav h2 a:hover,
+nav h2 a:focus,
+.menu a:hover,
+.menu a:focus {
+    background-color: var(--cor-intermediaria);
 }
 
-.menu{list-style: none;}
+.menu {
+    list-style: none;
+}
+
 /* regra para formatar os links comtidos na lista/meinu */
-.menu a{
-color: var(--cor-escura);
-font-weight: bold;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 50px;
+.menu a {
+    color: var(--cor-escura);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.menu.aberto {
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-clara);
+
+    position: absolute;
+    left: 0;
+    right: 0;
 }
