@@ -278,6 +278,77 @@ footer {
     text-align: center;
 }
 
+.conteudo {
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.conteudo h2 {
+    padding-left: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: solid 1px;
+
+}
+
+table,
+th,
+td {
+    border: solid 1px;
+}
+
+caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-escura);
+    padding: 0.7rem;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+td:last-child,
+th:last-child {
+    text-align: right;
+}
+
+th:first-child {
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--cor-clara);
+}
+
+td:last-child {
+    position: relative;
+}
+
+td:last-child::before {
+    content: "RS";
+    position: absolute;
+    left: 10px;
+}
+
 @media screen and (min-width: 570px) {
 
     header h2 {
@@ -288,19 +359,17 @@ footer {
     .menu {
 
         display: flex;
-
     }
 
     .menu li {
 
         width: 100%;
-
     }
 
     nav {
 
         width: 70%;
-
+        /*OwO*/
     }
 
 
@@ -313,68 +382,21 @@ footer {
 }
 
 @media (min-width: 900px) {
-   
-    .limitador {     max-width: 1000px; }
 
+    .limitador {
+        max-width: 1000px;
+    }
 
-    html{font-size: 18px;}
+    html {
+        font-size: 18px;
+    }
 }
 
-
-
-.conteudo{
-background-color: var(--cor-intermediaria);
-padding: 0.5rem;
-border-radius: 8px;
+.galeria {
+    text-align: center;
 }
 
-
-.conteudo h2{
-padding-left: 0;
-font-size: 1.8rem;
-border-bottom: solid 1px;
-margin-bottom: 1rem;
+.galeria img {
+    border-radius: 100%;
+    transform: scale(0.9);
 }
-table{
-width: 80%;
-margin: auto;
-border: solid 1px;
-
-}
-
-
-table,th,td{border: solid 1px;}
-
-
-caption{
-    text-transform: uppercase;
-font-weight: bold;
-font-size: 1.1rem;
-padding-bottom: 0.5rem;
-}
-
-
-
-th{
-background-color: var(--cor-escura);
-color: var(--cor-clara);
-border-color: var(--cor-escura);
-padding: 0.7rem;
-}
-
-
-td{padding: 0.5rem;}
-
-
-
-
-
-
-
-td:nth-child(2) {text-align: center;}
-
-td:last-child,th:last-child{text-align: right;}
-
-th:first-child{text-align: left;}
-
-tr:nth-child(odd){background-color: var(--cor-clara);}
