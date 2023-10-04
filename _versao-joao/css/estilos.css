@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 :root {
     /* Variáveis para a 
@@ -12,7 +14,9 @@
     --cor-intermediaria: #ececec;
 }
 
-html { font-size: 16px; }
+html {
+    font-size: 16px;
+}
 
 
 body {
@@ -22,12 +26,19 @@ body {
 }
 
 /* CSS Reset em alguns elementos */
-body, h1, h2, p, figure, .menu {
+body,
+h1,
+h2,
+p,
+figure,
+.menu {
     margin: 0;
     padding: 0;
 }
 
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+}
 
 h1 {
     font-family: Raleway, sans-serif;
@@ -43,7 +54,9 @@ h1 a {
     border-radius: 4px;
 }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+}
 
 header .limitador {
     display: flex;
@@ -55,7 +68,6 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
-    z-index: 100;
     background-color: var(--cor-clara);
 }
 
@@ -68,14 +80,16 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus, 
-.menu a:hover, .menu a:focus {
+nav h2 a:hover,
+nav h2 a:focus,
+.menu a:hover,
+.menu a:focus {
     background-color: var(--cor-intermediaria);
 }
 
 /* Regra da lista ul de links */
-.menu { 
-    list-style: none; 
+.menu {
+    list-style: none;
 
     /* ATENÇÃO!
     Usamos display:none para
@@ -92,7 +106,7 @@ links contidos na lista/menu */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;    
+    height: 50px;
 }
 
 
@@ -111,14 +125,14 @@ da manipulação programada com JavaScript. */
 
     /* Com os links em forma de coluna (vertical) */
     flex-direction: column;
-    
+
     /* Usamos as propriedades de posicionamento
     e coordenadas para garantir o encaixe correto
     (abaixo do título e da palavra Menu). */
     position: absolute;
     left: 0;
     right: 0;
-    
+
     /* Aplicamos um fundo à lista evitando a
     dificuldade de leitura dos links */
     background-color: var(--cor-clara);
@@ -145,7 +159,8 @@ da manipulação programada com JavaScript. */
 /* 2) Crie uma regra CSS para formatar o h2 e o p
 contidos em Destaque. Faça com que os textos
 fiquem centralizados e com a cor clara */
-.destaque h2, .destaque p { 
+.destaque h2,
+.destaque p {
     text-align: center;
     color: var(--cor-clara);
 
@@ -164,12 +179,14 @@ fiquem centralizados e com a cor clara */
 
 /* Regra de animação */
 @keyframes animaDestaque {
-    from { 
-        opacity: 0; 
+    from {
+        opacity: 0;
         transform: translateY(-600px);
     }
-    
-    to { opacity: 1; }
+
+    to {
+        opacity: 1;
+    }
 }
 
 article h2 {
@@ -179,7 +196,9 @@ article h2 {
     color: var(--cor-titulo);
 }
 
-.front-end, .historia, .localizacao {
+.front-end,
+.historia,
+.localizacao {
     text-align: center;
 }
 
@@ -196,7 +215,9 @@ abbr {
     border-radius: 4px;
 }
 
-address { font-style: normal; }
+address {
+    font-style: normal;
+}
 
 
 /* Correção dos exercícios */
@@ -257,8 +278,6 @@ footer {
     text-align: center;
 }
 
-
-/* Regras para as páginas Produtos, Serviços e Contato */
 .conteudo {
     background-color: var(--cor-intermediaria);
     padding: 0.5rem;
@@ -272,17 +291,17 @@ footer {
     margin-bottom: 1rem;
 }
 
-
 table {
     width: 80%;
     margin: auto;
-}
-
-table, th, td {
     border: solid 1px;
 
-    /* Remove o espaço entre bordas */
-    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: solid 1px;
 }
 
 caption {
@@ -299,90 +318,85 @@ th {
     padding: 0.7rem;
 }
 
-td { padding: 0.5rem; }
+td {
+    padding: 0.5rem;
+}
 
-td:nth-child(2) { text-align: center; }
+td:nth-child(2) {
+    text-align: center;
+}
 
-th:last-child, td:last-child { 
+td:last-child,
+th:last-child {
     text-align: right;
 }
 
-th:first-child { text-align: left; }
+th:first-child {
+    text-align: left;
+}
 
 tr:nth-child(odd) {
     background-color: var(--cor-clara);
 }
 
-/* Pseudo-elemento  ::before (::after) */
-td:last-child { position: relative; }
-td:last-child::before { 
-    content: "R$ ";
+td:last-child {
+    position: relative;
+}
+
+td:last-child::before {
+    content: "RS";
     position: absolute;
     left: 10px;
-} 
+}
 
-/* Regra geral do emoji do h2 dentro dos articles conteudo */
-.conteudo h2::before { content: "ℹ️ "; }
-.servicos h2::before { content: "🛠️ "; }
-.contato h2::before { content: "📧 "; }
+@media screen and (min-width: 570px) {
 
-.galeria { text-align: center; }
+    header h2 {
+
+        display: none;
+    }
+
+    .menu {
+
+        display: flex;
+    }
+
+    .menu li {
+
+        width: 100%;
+    }
+
+    nav {
+
+        width: 70%;
+        /*OwO*/
+    }
+
+
+    .front-end img {
+
+        height: 150px;
+
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .limitador {
+        max-width: 1000px;
+    }
+
+    html {
+        font-size: 18px;
+    }
+}
+
+.galeria {
+    text-align: center;
+}
+
 .galeria img {
     border-radius: 100%;
     transform: scale(0.9);
-    transition: 0.3s;
-    filter: blur(1px) brightness(150%);
 }
-
-/* Aplicamos o :hover e o :focus ao seletor de tag "a"
-em vez de aplicar no "img". Desta forma, o acionamento funcionará
-tanto com mouse quanto com teclado. */
-.galeria a:hover img, .galeria a:focus img {
-    transform: scale(1);
-    border-radius: 10%;
-    filter: blur(0);
-}
-
-
-
-
-
-
-
-
-/* Exercícios: regras condicionais (Media Queries) */
-
-/* 1) Crie uma regra condicional para telas a partir
-de 570px com as seguintes alterações:
-
-- Esconder a palavra Menu
-- Habilitar o flex para a classe "menu"
-- Definir largura de 100% para os itens dentro do "menu"
-- Definir largura de 70% para o nav
-- Reduzir para 150px a altura da imagem contida no artigo Front-End */
-@media screen and (min-width: 570px) {
-    nav h2 { display: none; }
-    .menu { display: flex; }
-    .menu li { width: 100%; }
-    nav { width: 70%; }
-    .front-end img { height: 150px; }
-}
-
-/* 2) Crie uma regra condicional para telas a partir de 900px
-com  as seguintes alterações:
-
-- Aumentar o tamanho geral de todos os textos para 18px 
-- Definir o tamanho máximo da classe limitador para 1000px; */
-@media screen and (min-width: 900px){
-    .limitador { max-width: 900px; }
-    html { font-size: 18px; }
-}
-
-
-
-
-
-
-
-
-
