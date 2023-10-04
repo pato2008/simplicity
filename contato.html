@@ -29,22 +29,22 @@
         <article class="limitador conteudo contato">
             <h2>Contato</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque labore unde quis dolorem
-            eum quisquam quidem magni ipsum laboriosam amet, consequuntur aperiam vero veritatis obcaecati vel
-            laborum, saepe aliquam mollitia animi iure commodi, harum praesentium. Vitae quaerat, vel nostrum
-            repudiandae quos rerum repellat fugit esse accusamus hic? Aliquid, aspernatur.</p>         
+                eum quisquam quidem magni ipsum laboriosam amet, consequuntur aperiam vero veritatis obcaecati vel
+                laborum, saepe aliquam mollitia animi iure commodi, harum praesentium. Vitae quaerat, vel nostrum
+                repudiandae quos rerum repellat fugit esse accusamus hic? Aliquid, aspernatur.</p>
 
             <form action="" method="post" autocomplete="off">
 
                 <div>
                     <!-- Nome -->
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required>
                 </div>
 
                 <div>
                     <!-- e-mail -->
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
 
                 <!-- data de nascimento -->
@@ -62,7 +62,7 @@
                 <!-- assunto -->
                 <div>
                     <label for="assunto">Assunto:</label>
-                    <select name="assunto" id="assunto">
+                    <select name="assunto" id="assunto" required>
                         <!-- Deixe um option vazio
                         de propósito -->
                         <option value=""></option>
@@ -76,7 +76,7 @@
                 <!-- mensagem -->
                 <div>
                     <label for="mensagem">Mensagem:</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                    <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
                 </div>
 
                 <button type="submit">Enviar dados</button>
