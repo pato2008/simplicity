@@ -10,6 +10,23 @@ const campoEstado = formulario.querySelector("#estado");
 const botaoBuscar = formulario.querySelector("#buscar");
 const mensagem = formulario.querySelector("#status");
 
+// seleçao do campo telefone 
+const campoTelefone= formulario.querySelector("#telefone")
+
+// const campoTelefone=$("telefone")
+
+//ativando a mascara para a telefone
+
+$(campoTelefone).mask("(00) 00000-0000");
+
+$(campoCep).mask("00000-000");
+
+
+
+
+
+
+
 // Detectando o evento de CLICK no botão buscar
 botaoBuscar.addEventListener("click", async function (event) {
     event.preventDefault();
@@ -18,7 +35,7 @@ botaoBuscar.addEventListener("click", async function (event) {
 
     /* Verificando se o cep NÃO tem 8 dígitos.
     O operador !== significa "diferente de". */
-    if (campoCep.value.length !== 8) {
+    if (campoCep.value.length !== 9) {
         // Alerte o usuário sobre o erro de digitação
         mensagem.textContent = "Digite um CEP válido!";
         mensagem.style.color = "purple";
@@ -47,10 +64,14 @@ botaoBuscar.addEventListener("click", async function (event) {
         mensagem.textContent = "O CEP foi encontrado ";
         mensagem.style.color = "blue";
 
-        campoEndereco.value =dados.logradouro;
-            campoBairro.value =dados.bairro;
-            campoCidade.value =dados.localidade;
-            campoEstado.value =dados.uf;
+const exdmplo = document.querySelectorAll(".exemplo");
+
+
+
+        campoEndereco.value = dados.logradouro;
+        campoBairro.value = dados.bairro;
+        campoCidade.value = dados.localidade;
+        campoEstado.value = dados.uf;
     }
 
 

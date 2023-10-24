@@ -29,9 +29,9 @@
         <article class="limitador conteudo contato">
             <h2>Contato</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque labore unde quis dolorem
-            eum quisquam quidem magni ipsum laboriosam amet, consequuntur aperiam vero veritatis obcaecati vel
-            laborum, saepe aliquam mollitia animi iure commodi, harum praesentium. Vitae quaerat, vel nostrum
-            repudiandae quos rerum repellat fugit esse accusamus hic? Aliquid, aspernatur.</p>         
+                eum quisquam quidem magni ipsum laboriosam amet, consequuntur aperiam vero veritatis obcaecati vel
+                laborum, saepe aliquam mollitia animi iure commodi, harum praesentium. Vitae quaerat, vel nostrum
+                repudiandae quos rerum repellat fugit esse accusamus hic? Aliquid, aspernatur.</p>
 
             <form action="" method="post" autocomplete="off">
 
@@ -54,30 +54,31 @@
                 </div>
 
                 <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
-<div>
-    <label for="cep">CEP: <br><span id="status"></span></label>
-    <div id="area-do-cep">
-        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="8" inputmode="numeric" required> <br>
-        <button id="buscar">Buscar</button>
-    </div>
-</div>
-<div>
-    <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" name="endereco" size="30">
-</div>
-<div>
-    <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro">
-</div>
-<div>
-    <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" name="cidade">
-</div>
-<div>
-    <label for="estado">Estado:</label>
-    <input type="text" id="estado" name="estado">
-</div>
-<!-- /FIM HTML PARA CEP/ENDEREÇO --> 
+                <div>
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep">
+                        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="9"
+                            inputmode="numeric" required> <br>
+                        <button id="buscar">Buscar</button>
+                    </div>
+                </div>
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" size="30">
+                </div>
+                <div>
+                    <label for="bairro">Bairro:</label>
+                    <input readonly type="text" id="bairro" name="bairro">
+                </div>
+                <div>
+                    <label for="cidade">Cidade:</label>
+                    <input readonly type="text" id="cidade" name="cidade">
+                </div>
+                <div>
+                    <label for="estado">Estado:</label>
+                    <input readonly type="text" id="estado" name="estado">
+                </div>
+                <!-- /FIM HTML PARA CEP/ENDEREÇO -->
 
 
                 <!-- telefone -->
@@ -94,7 +95,7 @@
                         <option>Dúvidas</option>
                         <option>Elogios</option>
                         <option>Reclamações</option>
-                        <option>Outros</option>                    
+                        <option>Outros</option>
                     </select>
                 </div>
 
@@ -105,7 +106,7 @@
                 </div>
 
                 <button type="submit">Enviar dados</button>
-                
+
             </form>
 
         </article>
@@ -117,6 +118,12 @@
             para fins educacionais &copy; <b>Senac Penha</b>
             - <time>2023</time> </p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
 
     <script src="js/menu.js"></script>
     <script src="js/contato.js"></script>
