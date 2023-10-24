@@ -68,6 +68,7 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
+    z-index: 100;
     background-color: var(--cor-clara);
 }
 
@@ -278,6 +279,8 @@ footer {
     text-align: center;
 }
 
+
+/* Regras para as páginas Produtos, Serviços e Contato */
 .conteudo {
     background-color: var(--cor-intermediaria);
     padding: 0.5rem;
@@ -291,17 +294,19 @@ footer {
     margin-bottom: 1rem;
 }
 
+
 table {
     width: 80%;
     margin: auto;
-    border: solid 1px;
-
 }
 
 table,
 th,
 td {
     border: solid 1px;
+
+    /* Remove o espaço entre bordas */
+    border-collapse: collapse;
 }
 
 caption {
@@ -326,8 +331,8 @@ td:nth-child(2) {
     text-align: center;
 }
 
-td:last-child,
-th:last-child {
+th:last-child,
+td:last-child {
     text-align: right;
 }
 
@@ -339,57 +344,28 @@ tr:nth-child(odd) {
     background-color: var(--cor-clara);
 }
 
+/* Pseudo-elemento  ::before (::after) */
 td:last-child {
     position: relative;
 }
 
 td:last-child::before {
-    content: "RS";
+    content: "R$ ";
     position: absolute;
     left: 10px;
 }
 
-@media screen and (min-width: 570px) {
-
-    header h2 {
-
-        display: none;
-    }
-
-    .menu {
-
-        display: flex;
-    }
-
-    .menu li {
-
-        width: 100%;
-    }
-
-    nav {
-
-        width: 70%;
-        /*OwO*/
-    }
-
-
-    .front-end img {
-
-        height: 150px;
-
-    }
-
+/* Regra geral do emoji do h2 dentro dos articles conteudo */
+.conteudo h2::before {
+    content: "ℹ️ ";
 }
 
-@media (min-width: 900px) {
+.servicos h2::before {
+    content: "🛠️ ";
+}
 
-    .limitador {
-        max-width: 1000px;
-    }
-
-    html {
-        font-size: 18px;
-    }
+.contato h2::before {
+    content: "📧 ";
 }
 
 .galeria {
@@ -399,4 +375,121 @@ td:last-child::before {
 .galeria img {
     border-radius: 100%;
     transform: scale(0.9);
+    transition: 0.3s;
+    filter: blur(1px) brightness(150%);
+}
+
+/* Aplicamos o :hover e o :focus ao seletor de tag "a"
+em vez de aplicar no "img". Desta forma, o acionamento funcionará
+tanto com mouse quanto com teclado. */
+.galeria a:hover img,
+.galeria a:focus img {
+    transform: scale(1);
+    border-radius: 10%;
+    filter: blur(0);
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+textarea {
+    height: auto;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* a sub classe :not() e usada para criar uma exesao a regra  */
+label {
+    font-size: 0.5rem;
+    font-weight: bold;
+    width: 50%;
+}
+
+form div *:not(label) {
+    width: 70%;
+}
+
+button{
+background-color: var(--cor-escura);
+background-color: var(--cor-clara);
+border: none;
+font-weight: bold;
+padding:1rem 0.5rem ;
+cursor: pointer;
+border-radius: 4px;
+}
+
+button:hover,button:focus{
+background-color: var(--cor-clara);
+color: var(--cor-escura);
+box-shadow: var(--cor-escura) 0 0 2px;
+}
+
+
+
+
+
+
+
+/* Exercícios: regras condicionais (Media Queries) */
+
+/* 1) Crie uma regra condicional para telas a partir
+de 570px com as seguintes alterações:
+
+- Esconder a palavra Menu
+- Habilitar o flex para a classe "menu"
+- Definir largura de 100% para os itens dentro do "menu"
+- Definir largura de 70% para o nav
+- Reduzir para 150px a altura da imagem contida no artigo Front-End */
+@media screen and (min-width: 570px) {
+    nav h2 {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    .front-end img {
+        height: 150px;
+    }
+}
+
+/* 2) Crie uma regra condicional para telas a partir de 900px
+com  as seguintes alterações:
+
+- Aumentar o tamanho geral de todos os textos para 18px 
+- Definir o tamanho máximo da classe limitador para 1000px; */
+@media screen and (min-width: 900px) {
+    .limitador {
+        max-width: 900px;
+    }
+
+    html {
+        font-size: 18px;
+    }
 }

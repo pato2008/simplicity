@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-* {
-    box-sizing: border-box;
-}
+
+* { box-sizing: border-box; }
 
 :root {
     /* Variáveis para a 
@@ -14,9 +13,7 @@
     --cor-intermediaria: #ececec;
 }
 
-html {
-    font-size: 16px;
-}
+html { font-size: 16px; }
 
 
 body {
@@ -26,19 +23,12 @@ body {
 }
 
 /* CSS Reset em alguns elementos */
-body,
-h1,
-h2,
-p,
-figure,
-.menu {
+body, h1, h2, p, figure, .menu {
     margin: 0;
     padding: 0;
 }
 
-img {
-    max-width: 100%;
-}
+img { max-width: 100%; }
 
 h1 {
     font-family: Raleway, sans-serif;
@@ -54,9 +44,7 @@ h1 a {
     border-radius: 4px;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
 header .limitador {
     display: flex;
@@ -81,16 +69,14 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover,
-nav h2 a:focus,
-.menu a:hover,
-.menu a:focus {
+nav h2 a:hover, nav h2 a:focus, 
+.menu a:hover, .menu a:focus {
     background-color: var(--cor-intermediaria);
 }
 
 /* Regra da lista ul de links */
-.menu {
-    list-style: none;
+.menu { 
+    list-style: none; 
 
     /* ATENÇÃO!
     Usamos display:none para
@@ -107,7 +93,7 @@ links contidos na lista/menu */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 50px;    
 }
 
 
@@ -126,14 +112,14 @@ da manipulação programada com JavaScript. */
 
     /* Com os links em forma de coluna (vertical) */
     flex-direction: column;
-
+    
     /* Usamos as propriedades de posicionamento
     e coordenadas para garantir o encaixe correto
     (abaixo do título e da palavra Menu). */
     position: absolute;
     left: 0;
     right: 0;
-
+    
     /* Aplicamos um fundo à lista evitando a
     dificuldade de leitura dos links */
     background-color: var(--cor-clara);
@@ -160,8 +146,7 @@ da manipulação programada com JavaScript. */
 /* 2) Crie uma regra CSS para formatar o h2 e o p
 contidos em Destaque. Faça com que os textos
 fiquem centralizados e com a cor clara */
-.destaque h2,
-.destaque p {
+.destaque h2, .destaque p { 
     text-align: center;
     color: var(--cor-clara);
 
@@ -180,14 +165,12 @@ fiquem centralizados e com a cor clara */
 
 /* Regra de animação */
 @keyframes animaDestaque {
-    from {
-        opacity: 0;
+    from { 
+        opacity: 0; 
         transform: translateY(-600px);
     }
-
-    to {
-        opacity: 1;
-    }
+    
+    to { opacity: 1; }
 }
 
 article h2 {
@@ -197,9 +180,7 @@ article h2 {
     color: var(--cor-titulo);
 }
 
-.front-end,
-.historia,
-.localizacao {
+.front-end, .historia, .localizacao {
     text-align: center;
 }
 
@@ -216,9 +197,7 @@ abbr {
     border-radius: 4px;
 }
 
-address {
-    font-style: normal;
-}
+address { font-style: normal; }
 
 
 /* Correção dos exercícios */
@@ -300,9 +279,7 @@ table {
     margin: auto;
 }
 
-table,
-th,
-td {
+table, th, td {
     border: solid 1px;
 
     /* Remove o espaço entre bordas */
@@ -323,55 +300,34 @@ th {
     padding: 0.7rem;
 }
 
-td {
-    padding: 0.5rem;
-}
+td { padding: 0.5rem; }
 
-td:nth-child(2) {
-    text-align: center;
-}
+td:nth-child(2) { text-align: center; }
 
-th:last-child,
-td:last-child {
+th:last-child, td:last-child { 
     text-align: right;
 }
 
-th:first-child {
-    text-align: left;
-}
+th:first-child { text-align: left; }
 
 tr:nth-child(odd) {
     background-color: var(--cor-clara);
 }
 
 /* Pseudo-elemento  ::before (::after) */
-td:last-child {
-    position: relative;
-}
-
-td:last-child::before {
+td:last-child { position: relative; }
+td:last-child::before { 
     content: "R$ ";
     position: absolute;
     left: 10px;
-}
+} 
 
 /* Regra geral do emoji do h2 dentro dos articles conteudo */
-.conteudo h2::before {
-    content: "ℹ️ ";
-}
+.conteudo h2::before { content: "ℹ️ "; }
+.servicos h2::before { content: "🛠️ "; }
+.contato h2::before { content: "📧 "; }
 
-.servicos h2::before {
-    content: "🛠️ ";
-}
-
-.contato h2::before {
-    content: "📧 ";
-}
-
-.galeria {
-    text-align: center;
-}
-
+.galeria { text-align: center; }
 .galeria img {
     border-radius: 100%;
     transform: scale(0.9);
@@ -382,30 +338,28 @@ td:last-child::before {
 /* Aplicamos o :hover e o :focus ao seletor de tag "a"
 em vez de aplicar no "img". Desta forma, o acionamento funcionará
 tanto com mouse quanto com teclado. */
-.galeria a:hover img,
-.galeria a:focus img {
+.galeria a:hover img, .galeria a:focus img {
     transform: scale(1);
     border-radius: 10%;
     filter: blur(0);
 }
 
+
+
+/* Regras para o formulário */
 form {
     max-width: 500px;
     margin: auto;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     border: none;
     padding: 4px;
     height: 40px;
     border-radius: 4px;
 }
 
-textarea {
-    height: auto;
-}
+textarea { height: auto; }
 
 form div {
     display: flex;
@@ -414,31 +368,44 @@ form div {
     margin-top: 1rem;
 }
 
-/* a sub classe :not() e usada para criar uma exesao a regra  */
 label {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    width: 50%;
+    width: 30%;
 }
 
-form div *:not(label) {
-    width: 70%;
+/* Pseudo-classe :not()
+Permite criar exceções para uma regra.
+Neste exemplo, estamos aplicando 70% de largura
+para tudo (*) dentro do "form div" EXCETO o "label". */
+form div *:not(label) { width: 70%; }
+
+
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-button{
-background-color: var(--cor-escura);
-background-color: var(--cor-clara);
-border: none;
-font-weight: bold;
-padding:1rem 0.5rem ;
-cursor: pointer;
-border-radius: 4px;
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 2px;
 }
 
-button:hover,button:focus{
-background-color: var(--cor-clara);
-color: var(--cor-escura);
-box-shadow: var(--cor-escura) 0 0 2px;
+#cep { width: 60%; }
+
+#buscar { 
+    width: 39%; 
+    padding: 12px;
+}
+
+#status { 
+    font-size: 12px;
 }
 
 
@@ -458,25 +425,11 @@ de 570px com as seguintes alterações:
 - Definir largura de 70% para o nav
 - Reduzir para 150px a altura da imagem contida no artigo Front-End */
 @media screen and (min-width: 570px) {
-    nav h2 {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .menu li {
-        width: 100%;
-    }
-
-    nav {
-        width: 70%;
-    }
-
-    .front-end img {
-        height: 150px;
-    }
+    nav h2 { display: none; }
+    .menu { display: flex; }
+    .menu li { width: 100%; }
+    nav { width: 70%; }
+    .front-end img { height: 150px; }
 }
 
 /* 2) Crie uma regra condicional para telas a partir de 900px
@@ -484,12 +437,16 @@ com  as seguintes alterações:
 
 - Aumentar o tamanho geral de todos os textos para 18px 
 - Definir o tamanho máximo da classe limitador para 1000px; */
-@media screen and (min-width: 900px) {
-    .limitador {
-        max-width: 900px;
-    }
-
-    html {
-        font-size: 18px;
-    }
+@media screen and (min-width: 900px){
+    .limitador { max-width: 900px; }
+    html { font-size: 18px; }
 }
+
+
+
+
+
+
+
+
+

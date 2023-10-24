@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simplicity-produtos</title>
+    <title>Produtos - Simplicity</title>
+    
+    <!-- CSS Externo -->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- CSS Interno: 
+    No caso de conflito, as regras criadas aqui SEMPRE irão prevalecer. -->
+    <style>
+        .conteudo h2::before { content: "🛒 "; }
+    </style>
 </head>
-
 <body>
-
+    
     <header>
         <div class="limitador">
             <h1><a href="index.html">Simplicity</a></h1>
@@ -26,72 +32,58 @@
     </header>
 
     <main>
-
-        <article class="limitador conteúdo">
-            <h2>produtos</h2>
-        
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident maiores unde sit, fugiat minima cupiditate, corporis, iure vitae quidem dignissimos iusto quae facilis voluptatum assumenda consectetur molestiae at ullam tempora neque corrupti modi voluptatibus sint? Iste earum eligendi repellat porro repellendus dolores doloribus? Sequi assumenda consequatur facere pariatur. Veniam ab exercitationem unde tempore inventore adipisci doloribus laboriosam, aut, quidem animi, fugiat expedita quod voluptatum impedit eveniet aliquam illo laudantium. Fugiat accusamus doloribus repellat veritatis dolore porro eaque, quidem ipsam, ea reprehenderit, debitis molestias aliquid blanditiis veniam aperiam asperiores! Quas veniam possimus repellat quis, praesentium atque expedita dolore temporibus doloribus est?</p>
-
+        <article class="limitador conteudo produtos">
+            <h2>Produtos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita similique ab et inventore a quod fuga rerum. Autem facilis aliquam molestiae quia nisi ipsum voluptatem suscipit veritatis deserunt ratione!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit obcaecati nihil sed vel tempore, aliquid, enim, ipsam accusantium totam iste voluptates illum repellendus? At quaerat voluptas voluptate maxime quasi accusantium?</p>
 
 
-        <table>
-            <tr>
-                <th>produtos</th>
-                <th>valor</th>
-                <th>prazo de entrega</th>
-            </tr>
-            <tr>
-
-                <td>wedsite</td>
-                <td>5000</td>
-                <td>4dias</td>
-            </tr>
-
-            <tr>
-
-                <td>aplicativo</td>
-                <td>400000</td>
-                <td>10dias</td>
-
-            </tr>
-            <tr>
-
-                <td>games</td>
-                <td>60000000000</td>
-                <td>4meses</td>
-            </tr>
-            <tr>
-
-                <td>loja vritual</td>
-                <td>60000</td>
-                <td>60dias
-
-                </td>
-            </tr>
-
-        </table>
-
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident maiores unde sit, fugiat minima cupiditate, corporis, iure vitae quidem dignissimos iusto quae facilis voluptatum assumenda consectetur molestiae at ullam tempora neque corrupti modi voluptatibus sint? Iste earum eligendi repellat porro repellendus dolores doloribus? Sequi assumenda consequatur facere pariatur. Veniam ab exercitationem unde tempore inventore adipisci doloribus laboriosam, aut, quidem animi, fugiat expedita quod voluptatum impedit eveniet aliquam illo laudantium. Fugiat accusamus doloribus repellat veritatis dolore porro eaque, quidem ipsam, ea reprehenderit, debitis molestias aliquid blanditiis veniam aperiam asperiores! Quas veniam possimus repellat quis, praesentium atque expedita dolore temporibus doloribus est?</p>
-
-
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident maiores unde sit, fugiat minima cupiditate, corporis, iure vitae quidem dignissimos iusto quae facilis voluptatum assumenda consectetur molestiae at ullam tempora neque corrupti modi voluptatibus sint? Iste earum eligendi repellat porro repellendus dolores doloribus? Sequi assumenda consequatur facere pariatur. Veniam ab exercitationem unde tempore inventore adipisci doloribus laboriosam, aut, quidem animi, fugiat expedita quod voluptatum impedit eveniet aliquam illo laudantium. Fugiat accusamus doloribus repellat veritatis dolore porro eaque, quidem ipsam, ea reprehenderit, debitis molestias aliquid blanditiis veniam aperiam asperiores! Quas veniam possimus repellat quis, praesentium atque expedita dolore temporibus doloribus est?</p>
-
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident maiores unde sit, fugiat minima cupiditate, corporis, iure vitae quidem dignissimos iusto quae facilis voluptatum assumenda consectetur molestiae at ullam tempora neque corrupti modi voluptatibus sint? Iste earum eligendi repellat porro repellendus dolores doloribus? Sequi assumenda consequatur facere pariatur. Veniam ab exercitationem unde tempore inventore adipisci doloribus laboriosam, aut, quidem animi, fugiat expedita quod voluptatum impedit eveniet aliquam illo laudantium. Fugiat accusamus doloribus repellat veritatis dolore porro eaque, quidem ipsam, ea reprehenderit, debitis molestias aliquid blanditiis veniam aperiam asperiores! Quas veniam possimus repellat quis, praesentium atque expedita dolore temporibus doloribus est?</p>
+            <table>
+                <caption>Nossos produtos</caption>
+                <tr>
+                    <th>Produto</th>
+                    <th>Prazo de entrega</th>
+                    <th>Valor aproximado</th>
+                </tr>
+                <tr>
+                    <td>Website</td>
+                    <td>30 dias</td>
+                    <td>7.500,00</td>
+                </tr>
+                <tr>
+                    <td>Aplicativo</td>
+                    <td>60 dias</td>
+                    <td>15.000,00</td>
+                </tr>
+                <tr>
+                    <td>Game</td>
+                    <td>45 dias</td>
+                    <td>10.000,00</td>
+                </tr>
+                <tr>
+                    <td>Loja Virtual</td>
+                    <td>60 dias</td>
+                    <td>9.500,00</td>
+                </tr>
+            </table>
 
 
 
-</article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita similique ab et inventore a quod fuga rerum. Autem facilis aliquam molestiae quia nisi ipsum voluptatem suscipit veritatis deserunt ratione!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita similique ab et inventore a quod fuga rerum. Autem facilis aliquam molestiae quia nisi ipsum voluptatem suscipit veritatis deserunt ratione!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita similique ab et inventore a quod fuga rerum. Autem facilis aliquam molestiae quia nisi ipsum voluptatem suscipit veritatis deserunt ratione!</p>
+
+        </article>
 
     </main>
 
     <footer>
         <p>Simplicity é um site fictício desenvolvido
-            para fins educacionais &copy; <b>Senac Penha</b>
-            - <time>2023</time> </p>
+        para fins educacionais &copy; <b>Senac Penha</b>
+         - <time>2023</time> </p>
     </footer>
 
 
 
 </body>
-
 </html>
